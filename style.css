@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.title {
+  margin: 20px 10px 10px;
+  text-align: center;
+  box-shadow: 0px 2px 10px rgba(247, 243, 243, 0.486);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  gap: 20px;
+}
+.container img {
+  --a: 2deg; /* control the angle of rotation (the smaller, the better) */
+  width: 300px;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  transform: perspective(400px)
+    rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
+  -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100%/250%
+    250%;
+  transition: 2s;
+  cursor: pointer;
+  object-fit: cover;
+  border-radius: 3px;
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+  max-width: 100%;
+  -webkit-transition: ease all 0.3s;
+  -moz-transition: ease all 0.3s;
+  -o-transition: ease all 0.3s;
+  transition: ease all 0.3s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  filter: grayscale(70%);
+}
+.container img:hover {
+  --i: -1;
+  -webkit-mask-position: 0 0;
+  -webkit-transform: scale(1.1) rotate(0.1deg);
+  -moz-transform: scale(1.1) rotate(0.1deg);
+  -ms-transform: scale(1.1) rotate(0.1deg);
+  -o-transform: scale(1.1) rotate(0.1deg);
+  transform: scale(1.1) rotate(0.1deg);
+  border: 0.25px solid #fff;
+
+  box-shadow: 5px 5px 5px #52515173;
+  -moz-box-shadow: 0px 10px 5px #524e4e1f;
+  -webkit-box-shadow: 5px 5px 5px #f1ecec;
+  cursor: pointer;
+  filter: grayscale(0%);
+}
+
+/*.container img {
+  object-fit: cover;
+  border-radius: 3px;
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+  max-width: 100%;
+  -webkit-transition: ease all 0.3s;
+  -moz-transition: ease all 0.3s;
+  -o-transition: ease all 0.3s;
+  transition: ease all 0.3s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  filter: grayscale(80%);
+}*/
+/*.container img:hover {
+  -webkit-transform: scale(1.1) rotate(0.1deg);
+  -moz-transform: scale(1.1) rotate(0.1deg);
+  -ms-transform: scale(1.1) rotate(0.1deg);
+  -o-transform: scale(1.1) rotate(0.1deg);
+  transform: scale(1.1) rotate(0.1deg);
+  border: 0.25px solid #fff;
+
+  box-shadow: 5px 5px 5px #52515173;
+  -moz-box-shadow: 0px 10px 5px #524e4e1f;
+  -webkit-box-shadow: 5px 5px 5px #f1ecec;
+  cursor: pointer;
+  filter: grayscale(0%);
+}*/
